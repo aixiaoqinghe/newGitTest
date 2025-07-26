@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵猫传</title>
+    <style type="text/css">
+        * {
+            background-color: #663300;
+            color: white;
+        }
+
+        a {
+            border: 20px;
+        }
+
+        body {
+            /* 我使用弹性布局是为了设置图片之间的间距 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+             /* 开启相对定位，用于定位提示文字 */
+            position: relative;
+        }
+
+         /* 初始状态下隐藏提示文字 */
+         .hover-text {
+            display: none;
+            position: absolute;
+            /* 调整提示文字距离图片顶部的距离，可按需修改 */
+            top: calc(100% + 30px);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 50px;
+         } 
+
+         /* 初始状态下隐藏视频 */
+         .video-container {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+
+         a:hover + .hover-text {
+            display: block;
+         }
+
+         a:hover + .video-container {
+            display: block;
+         }
+
+        a:hover {
+            border: 3px solid; 
+            box-sizing: border-box; 
+            border-color: #ffffb3;
+            transition: border-color  0.3s ease; 
+        }
+    </style>
+</head>
+<body>
+    <a href="宁北.html"><img alt="宁北" src="img/宁北.jpg" width="250px" height="550px" /></a>
+    <div class="hover-text">宁北</div>
+    <div class="video-container"><vedio width="250px" height="550px" src="https://m.weibo.cn/status/4858226032251151?sourceType=weixin&from=10F5095010&wm=20005_0002&s_channel=4&s_trans=7798831136_4858226032251151#&video">抱歉，由于一些原因，该视频暂时无法播放</vedio></div>
+    <a href="陆知也.html"><img alt="陆知也" src="img/陆知也.jpg" width="250px" height="550px"  /></a>
+    <div class="hover-text">陆知也</div>
+    <a href="祁清和.html"><img alt="祁清和" src="img/祁清和.jpg" width="250px" height="550px"  /></a>
+    <div class="hover-text">祁清和</div>
+    <a href="安歌.html"><img alt="安歌" src="img/安歌.jpg" width="250px" height="550px" /></a>
+    <div class="hover-text">安歌</div>
+    <a href="沈既明.html"><img alt="沈既明" src="img/沈既明.jpg" width="250px" height="550px"  /></a>
+    <div class="hover-text">沈既明</div>
+    <!-- 我想要达到把鼠标放在图片上可以有动态视频的效果，最好还能有音乐，但是现在的问题是我的视频下载不下来，而且这个视频好像有点出不来 -->
+</body>
+</html>
